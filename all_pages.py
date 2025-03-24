@@ -1,6 +1,5 @@
 from nicegui import ui
 from pages.patients import patients
-from pages.add_patient import add_patient
 from pages.search_patient import search_patient
 from pages.modify_patient import modify_patient
 from pages.delete_patient import delete_patient
@@ -12,9 +11,7 @@ def create() -> None:
     ui.page('/patients/')(patients)
     
     ui.page('/search_patient/')(search_patient)
-    
-    ui.page('/add_patient/')(add_patient)
-    
+        
     ui.page('/modify_patient/')(modify_patient)
     
     ui.page('/delete_patient/')(delete_patient)
