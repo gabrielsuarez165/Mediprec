@@ -1,15 +1,9 @@
 import theme
 from nicegui import ui
 
-
 def file_patient():
-    with theme.frame('patients'):
-        
-        ui.page_title('PACIENTE')
-        
-        ui.markdown('')
-        ui.space()
-        
+    with theme.frame('file_patient'):
+        ui.markdown('')       
         ui.add_css('''.white
             {color: white;
             text-decoration:none
@@ -21,28 +15,20 @@ def file_patient():
         
         with ui.card().classes('w-full'):
             ui.label('ANALISIS de LABORATORIO SEGUN PERFIL DEL PACIENTE')
-        with ui.card().classes('w-full'):
-            ui.label('ANALISIS DE LABORATORIO').classes('bolt')
             ui.label(' hemograma completo, hepatograma, colesterol LDL, triglicéridos, glucemia, HbA1c, uricemia, creatininemia')
             ui.label('Examen orina completa y de 24 horas')
-            
-            with ui.button().classes('px-16'):
-                  ui.link('Recetar analisis de Laboratorio', '/').classes('white')
         ui.space()
-        
-        
+         
         with ui.card().classes('w-full'):
             ui.label('ANALISIS CLINICO SEGUN PERFIL DEL PACIENTE')
-        with ui.card().classes('w-full'):
-            ui.label('ANALISIS CLINICO').classes('bolt')
             ui.label(' Electrocardiograma')
             ui.label(' Ergometria')
             ui.label(' Placa de Torax')
             ui.label('Examen fisico completo')
-            
-            with ui.button().classes('px-16'):
-                  ui.link('Recetar analisis Clinico', '/').classes('white')
         ui.space()
+                          
+        with ui.button().classes('w-full'):
+            ui.link('Recetar analisis Segun perfil', '/').classes('white')
         
         with ui.card().classes('w-full'):
             ui.label('HISTORIAL CLINICO').classes('bolt')
@@ -53,18 +39,17 @@ def file_patient():
                   referidos al motivo de consulta.
                   Continuar la evolución hasta el momento de la consulta''') 
             with ui.row().classes('w-full items-center '):   
-                  with ui.button().classes('px-5'):
+                  with ui.button().classes('w-full'):
                         ui.link('Ver historial Clinico COMPLETO', '/').classes('white')
-                  with ui.button().classes('px-5'):
-                        ui.link('Redactar historial Clinico ', '/').classes('white')
-      
+                  with ui.button().classes('w-full'):
+                        ui.link('Redactar historial Clinico ', '/').classes('white')    
         ui.space()
        
         with ui.card().classes('w-full'):       
-            with ui.button().classes('px-16'):
-                   ui.link('VOLVER', '/').classes('white')
-            
+            with ui.button().classes('w-full'):
+                ui.link('VOLVER', '/').classes('white')         
         ui.space()
+        
         
         
         

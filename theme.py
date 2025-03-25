@@ -1,7 +1,4 @@
 from contextlib import contextmanager
-
-from menu import menu
-
 from nicegui import ui
 
 
@@ -21,8 +18,6 @@ def frame(navtitle: str):
             ui.space()
 
     with ui.footer(value=True) as footer:
-         ui.label('Cualquier consulta se puede comunicar con nosotros al XXX - XXX XXXX')
-
-            
+        ui.label('Cualquier consulta se puede comunicar con nosotros al XXX - XXX XXXX')      
     with ui.page_sticky(position='bottom-right', x_offset=20, y_offset=20):
         ui.button(on_click=footer.toggle, icon='contact_support').props('fab')
